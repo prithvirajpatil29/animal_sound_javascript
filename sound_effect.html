@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Effects</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        center{
+            padding: 20px;
+            background-color: #0077B5;
+            color: white;
+        }
+        .container{
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .container>button{
+            margin-right: 20px;
+            padding: 20px 80px;
+            cursor: pointer;
+            border: 0px solid;
+            border-radius: 20px 10px;
+            background-color: #0077B5;
+            color: white;
+        }
+        .container>button:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <audio id="dogaudio">
+        <source src="assets/media/dog-barking-70772.mp3" type="audio/mp3">
+    </audio>
+    <audio id="wolfaudio">
+        <source src="assets/media/wolf-howl-6310.mp3" type="audio/mp3">
+    </audio>
+    <audio id="horseaudio">
+        <source src="assets/media/horse-123780.mp3" type="audio/mp3">
+    </audio>
+    <audio id="lionaudio">
+        <source src="assets/media/angry-beast-6172.mp3" type="audio/mp3">
+    </audio>
+    <audio id="elephantaudio">
+        <source src="assets/media/elephant-trumpets-growls-6047.mp3" type="audio/mp3">
+    </audio>
+    <center>
+    <h1>Animals Sound</h1>
+    </center>
+    <div class="container">
+    <button onclick="dogAudio()" id="dog">Dog</button>
+    <button onclick="wolfAudio()" id="wolf">Wolf</button>
+    <button onclick="horseAudio()" id="horse">Horse</button>
+    <button onclick="lionAudio()" id="lion">Lion</button>
+    <button onclick="elephantAudio()" id="elephant">Elephant</button>
+    </div>
+    <script>
+        var dogaudio = document.getElementById("dogaudio");
+        var wolfaudio = document.getElementById("wolfaudio");
+        var horseaudio = document.getElementById("horseaudio");
+        var lionaudio = document.getElementById("lionaudio");
+        var elephantaudio = document.getElementById("elephantaudio");
+        var dog = document.getElementById("dog");
+        var wolf = document.getElementById("wolf");
+        var horse = document.getElementById("horse");
+        var lion = document.getElementById("lion");
+        var elephant = document.getElementById("elephant");
+        function dogAudio(){
+            if(dogaudio.paused){
+                dogaudio.play();
+                dog.style.backgroundColor = "green";
+            }
+            else{
+                dogaudio.pause();
+                dog.style.backgroundColor = "";
+            }
+        }
+        function wolfAudio(){
+            if(wolfaudio.paused){
+                wolfaudio.play();
+                wolfaudio.loop = true;
+                wolf.style.backgroundColor = "green";
+            }
+            else{
+                wolfaudio.pause();
+                wolf.style.backgroundColor = "";
+            }
+        }
+        function horseAudio(){
+            if(horseaudio.paused){
+                horseaudio.play();
+                horseaudio.loop = true;
+                horse.style.backgroundColor = "green";
+            }
+            else{
+                horseaudio.pause();
+                horse.style.backgroundColor = "";
+            }
+        }
+        function lionAudio(){
+            if(lionaudio.paused){
+                lionaudio.play();
+                lionaudio.loop = true;
+                lion.style.backgroundColor = "green";
+            }
+            else{
+                lionaudio.pause();
+                lion.style.backgroundColor = "";
+
+            }
+        }
+        function elephantAudio(){
+            if(elephantaudio.paused){
+                elephantaudio.play();
+                elephantaudio.loop = true;
+                elephant.style.backgroundColor = "green";
+
+            }
+            else{
+                elephantaudio.pause();
+                elephant.style.backgroundColor = "";
+
+            }
+        }
+    </script>
+</body>
+</html>
